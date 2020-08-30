@@ -1,15 +1,15 @@
-import React from 'react';
-import './App.css';
-import WordCard from './WordCard';
+import React from 'react'; 
+import './App.css'; 
+import Score from './Score';
 
+const word = "Hello";
 
-const word = "Hello"
 function App() {
-  return (
-    <div>
-     <WordCard value={word}/>
-    </div>
-  );
-}
+  return ( 
+    <div className="Background"> 
+      <Score value={word}/>
+    </div> 
+  ); 
+} 
 
 export default App;

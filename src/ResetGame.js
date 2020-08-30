@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react'; 
 
-export default function ResetGameButton(props) { 
+export default function ResetGame(props) { 
     const [active, setActive] = useState(false);
 
     const activate = () => { 
@@ -15,6 +15,6 @@ export default function ResetGameButton(props) {
     })
 
     return ( 
-        <div className='card resetCard' onClick={activate}>Again</div>
+        <div className='card resetCard' onClick={activate}>RESET</div>
     )     
 }

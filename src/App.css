@@ -6,9 +6,40 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     margin: 1em;
     user-select: none;
-   }
-
-.activeCard {
-    color: red;
-    background: pink;
-}
+    padding: 1%;
+  }
+  .resetCard { 
+    color:black; 
+    background:red; 
+  }
+  
+  .activeCard { 
+    color: red; 
+    background: pink; 
+  }
+  
+  .winCard{
+    color:black;
+    background:yellow;
+  }
+  
+  .tableScore{
+    border: 1px solid red;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+  }
+  
+  .Background {
+    background-image: url("Background.png");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }

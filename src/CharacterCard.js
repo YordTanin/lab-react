@@ -1,25 +1,30 @@
-import React, {useState,useEffect,useRef} from 'react';
+import React, { useState, useEffect, useRef} from 'react'; 
 
-export default function CharacterCard(props){
-    const [active, setActive] = useState(false);
-    const attemptRef = useRef(props.attempt);
+export default function CharacterCard(props) { 
+    const [active, setActive] = useState(false); 
 
-    const activate = () => {
+    const attempRef = useRef(props.attempt)
+
+    const activate = () => { 
         if(!active){
             setActive(true)
             props.activationHandler(props.value)
         }
+    } 
+
+    useEffect(() => {
+        if(attempRef.current != props.attempt){
+            setActive(false);
+            attempRef.current = props.attempt
+        }
+    })  
+
+    let className = `card ${active ? 'activeCard': ''}`
+    if(props.completed == true){
+        className =  `card ${active ? 'winCard': ''}`
     }
 
-    useEffect(()=> {
-        if(attemptRef.current != props.attempt){
-            setActive(false);
-            attemptRef.current = props.attempt
-        }
-    })
-
-    const className = `card ${active ? 'activeCard' : ''}`
-        return (
-    <div className={className} onClick={activate}>{props.value}</div>
-    )
+    return ( 
+        <div className={className} onClick={activate}>{props.value}</div>
+    )     
 }
